@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A0EC88D2-A359-45F5-B492-5A32317CE612}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Delphi_4\Delphi4.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi_5\Delphi5.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Delphi4">
+        <MSBuild Projects="Delphi_4\Delphi4.dproj"/>
+    </Target>
+    <Target Name="Delphi4:Clean">
+        <MSBuild Projects="Delphi_4\Delphi4.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Delphi4:Make">
+        <MSBuild Projects="Delphi_4\Delphi4.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Delphi5">
+        <MSBuild Projects="Delphi_5\Delphi5.dproj"/>
+    </Target>
+    <Target Name="Delphi5:Clean">
+        <MSBuild Projects="Delphi_5\Delphi5.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Delphi5:Make">
+        <MSBuild Projects="Delphi_5\Delphi5.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Delphi4;Delphi5"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Delphi4:Make;Delphi5:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
