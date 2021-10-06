@@ -9,6 +9,9 @@
         <Projects Include="Delphi_5\Delphi5.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Delphi_6\Delphi6.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="Delphi5:Make">
         <MSBuild Projects="Delphi_5\Delphi5.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Delphi6">
+        <MSBuild Projects="Delphi_6\Delphi6.dproj"/>
+    </Target>
+    <Target Name="Delphi6:Clean">
+        <MSBuild Projects="Delphi_6\Delphi6.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Delphi6:Make">
+        <MSBuild Projects="Delphi_6\Delphi6.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Delphi4;Delphi5"/>
+        <CallTarget Targets="Delphi4;Delphi5;Delphi6"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean"/>
+        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean;Delphi6:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Delphi4:Make;Delphi5:Make"/>
+        <CallTarget Targets="Delphi4:Make;Delphi5:Make;Delphi6:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
