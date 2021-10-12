@@ -18,6 +18,9 @@
         <Projects Include="Delphi_8\Delphi8.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Delphi_9\Delphi9.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -71,14 +74,23 @@
     <Target Name="Delphi8:Make">
         <MSBuild Projects="Delphi_8\Delphi8.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Delphi9">
+        <MSBuild Projects="Delphi_9\Delphi9.dproj"/>
+    </Target>
+    <Target Name="Delphi9:Clean">
+        <MSBuild Projects="Delphi_9\Delphi9.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Delphi9:Make">
+        <MSBuild Projects="Delphi_9\Delphi9.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Delphi4;Delphi5;Delphi6;Delphi7;Delphi8"/>
+        <CallTarget Targets="Delphi4;Delphi5;Delphi6;Delphi7;Delphi8;Delphi9"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean;Delphi6:Clean;Delphi7:Clean;Delphi8:Clean"/>
+        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean;Delphi6:Clean;Delphi7:Clean;Delphi8:Clean;Delphi9:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Delphi4:Make;Delphi5:Make;Delphi6:Make;Delphi7:Make;Delphi8:Make"/>
+        <CallTarget Targets="Delphi4:Make;Delphi5:Make;Delphi6:Make;Delphi7:Make;Delphi8:Make;Delphi9:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
