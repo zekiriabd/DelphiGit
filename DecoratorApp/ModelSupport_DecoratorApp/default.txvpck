@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ac1q5wqjk2h_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::5wmfifsipuo_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,166,213" />
+      <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LogConsoleMailDecorator" />
+      <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.ILogger" />
+      <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LoggerBase" />
+      <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LogConsoleDecorator" />
+      <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LoggerDecorator" />
+    </reference>
+  </view>
+</nodeSet>

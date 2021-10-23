@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="5wmfifsipuo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LogConsoleMailDecorator">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="760,360,163,99" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LogConsoleMailDecorator.Create(DecoratorApp.ILogger)" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LogConsoleMailDecorator.log()" />
+      <reference referencedUin="delphi:l_gnt:src:DecoratorApp:DecoratorApp.LogConsoleMailDecorator:DecoratorApp.LoggerDecorator">
+        <property name="sourceAnchor" value="782,360" />
+        <property name="targetAnchor" value="709,299" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.ILogger">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="440,40,86,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.ILogger.log()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:DecoratorApp:DecoratorApp.@unitclass.x" />
+      <reference referencedUin="delphi:e_field:src:DecoratorApp:DecoratorApp.@unitclass.logConsoleMailD" />
+      <reference referencedUin="delphi:l_ast:src:DecoratorApp:DecoratorApp.@unitclass.logConsoleMailD" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LoggerBase">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="280,240,129,98" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LoggerBase.log()" />
+      <reference referencedUin="delphi:l_impl:src:DecoratorApp:DecoratorApp.LoggerBase:DecoratorApp.ILogger">
+        <property name="sourceAnchor" value="376,240" />
+        <property name="targetAnchor" value="455,121" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LogConsoleDecorator">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="540,360,139,99" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LogConsoleDecorator.Create(DecoratorApp.ILogger)" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LogConsoleDecorator.log()" />
+      <reference referencedUin="delphi:l_gnt:src:DecoratorApp:DecoratorApp.LogConsoleDecorator:DecoratorApp.LoggerDecorator">
+        <property name="sourceAnchor" value="629,360" />
+        <property name="targetAnchor" value="629,310" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DecoratorApp:DecoratorApp.LoggerDecorator">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="580,180,129,130" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:DecoratorApp:DecoratorApp.LoggerDecorator.loggerBase" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LoggerDecorator.Create(DecoratorApp.ILogger)" />
+      <reference referencedUin="delphi:e_method:src:DecoratorApp:DecoratorApp.LoggerDecorator.log()" />
+      <reference referencedUin="delphi:l_impl:src:DecoratorApp:DecoratorApp.LoggerDecorator:DecoratorApp.ILogger">
+        <property name="sourceAnchor" value="580,180" />
+        <property name="targetAnchor" value="522,120" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:DecoratorApp:DecoratorApp.LoggerDecorator.loggerBase">
+        <property name="sourceAnchor" value="580,186" />
+        <property name="targetAnchor" value="517,121" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+  </view>
+</nodeSet>
