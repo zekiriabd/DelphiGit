@@ -30,6 +30,15 @@
         <Projects Include="Delphi_12\Delphi12.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Delphi_13\DelphiVCL1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi_14\DelphiVCL2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi_15\DelphiVCL3.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -119,14 +128,41 @@
     <Target Name="Delphi12:Make">
         <MSBuild Projects="Delphi_12\Delphi12.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DelphiVCL1">
+        <MSBuild Projects="Delphi_13\DelphiVCL1.dproj"/>
+    </Target>
+    <Target Name="DelphiVCL1:Clean">
+        <MSBuild Projects="Delphi_13\DelphiVCL1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVCL1:Make">
+        <MSBuild Projects="Delphi_13\DelphiVCL1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVCL2">
+        <MSBuild Projects="Delphi_14\DelphiVCL2.dproj"/>
+    </Target>
+    <Target Name="DelphiVCL2:Clean">
+        <MSBuild Projects="Delphi_14\DelphiVCL2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVCL2:Make">
+        <MSBuild Projects="Delphi_14\DelphiVCL2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DelphiVCL3">
+        <MSBuild Projects="Delphi_15\DelphiVCL3.dproj"/>
+    </Target>
+    <Target Name="DelphiVCL3:Clean">
+        <MSBuild Projects="Delphi_15\DelphiVCL3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiVCL3:Make">
+        <MSBuild Projects="Delphi_15\DelphiVCL3.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Delphi4;Delphi5;Delphi6;Delphi7;Delphi8;Delphi9;Delphi10;delphi11;Delphi12"/>
+        <CallTarget Targets="Delphi4;Delphi5;Delphi6;Delphi7;Delphi8;Delphi9;Delphi10;delphi11;Delphi12;DelphiVCL1;DelphiVCL2;DelphiVCL3"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean;Delphi6:Clean;Delphi7:Clean;Delphi8:Clean;Delphi9:Clean;Delphi10:Clean;delphi11:Clean;Delphi12:Clean"/>
+        <CallTarget Targets="Delphi4:Clean;Delphi5:Clean;Delphi6:Clean;Delphi7:Clean;Delphi8:Clean;Delphi9:Clean;Delphi10:Clean;delphi11:Clean;Delphi12:Clean;DelphiVCL1:Clean;DelphiVCL2:Clean;DelphiVCL3:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Delphi4:Make;Delphi5:Make;Delphi6:Make;Delphi7:Make;Delphi8:Make;Delphi9:Make;Delphi10:Make;delphi11:Make;Delphi12:Make"/>
+        <CallTarget Targets="Delphi4:Make;Delphi5:Make;Delphi6:Make;Delphi7:Make;Delphi8:Make;Delphi9:Make;Delphi10:Make;delphi11:Make;Delphi12:Make;DelphiVCL1:Make;DelphiVCL2:Make;DelphiVCL3:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
