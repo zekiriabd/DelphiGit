@@ -47,7 +47,16 @@ begin
     ADOTable1.Connection :=  ADOConnection1;
     ADOTable1.TableName:='[Feuil1$]';
     ADOTable1.Active :=true;
+
+  var appsttings := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'appsetting.ini');
+     try
+         var pathFile := appsttings.ReadString('Connection','ExcelFilePath', EmptyStr);
+          edit1.text := pathFile;
+     finally
+      appsttings.Free;
+     end;
      }
+
 end;
 
 end.
